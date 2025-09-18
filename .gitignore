@@ -1,0 +1,61 @@
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Secrets/credentials (keep real secrets out of the repo) ---
+.env
+.env.* 
+*.key
+*.pem
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+.python-version
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# --- Node / JS / TS ---
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.eslintcache
+.turbo/
+
+# Framework builds & caches
+dist/
+build/
+.next/
+.nuxt/
+.svelte-kit/
+.vite/
+.cache/
+.parcel-cache/
+
+# --- Tools / CI / Coverage ---
+coverage/
+coverage.xml
+.cache/
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+
+# --- AWS SAM / Serverless ---
+.aws-sam/
+
+# --- Logs ---
+*.log
+
+# --- Binaries / OS artifacts that shouldn’t be versioned ---
+*.pid

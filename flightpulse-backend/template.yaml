@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  flightpulse-backend
+
+Globals:
+  Function:
+    Timeout: 15
+
+Resources:
+  CheckFlightStatusFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambda_handler
+      Runtime: python3.13
+      CodeUri: ./
+      MemorySize: 128
+      Timeout: 15
+      Events:
+        CheckFlight:
+          Type: Api
+          Properties:
+            Path: /check-flight
+            Method: GET
+        DashboardFlights:
+          Type: Api
+          Properties:
+            Path: /dashboard-flights
+            Method: GET
+
+Outputs:
+  FlightStatusApi:
+    Description: "API Gateway endpoint URL for CheckFlightStatusFunction"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/check-flight/"
+  FlightStatusFunction:
+    Description: "Check Flight Status Lambda Function ARN"
+    Value: !GetAtt CheckFlightStatusFunction.Arn
+  FlightStatusFunctionIamRole:
+    Description: "Implicit IAM Role created for CheckFlightStatusFunction"
+    Value: !GetAtt CheckFlightStatusFunctionRole.Arn

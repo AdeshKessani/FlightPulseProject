@@ -1,0 +1,61 @@
+.dashboard-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.dashboard-title {
+  color: #2e86de;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Airport selector styling */
+.airport-selector {
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.airport-selector label {
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.airport-selector select {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Grid & card styles (unchanged) */
+.status-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.status-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 200px;
+  text-align: center;
+}
+
+.status-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.status-card p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  margin-top: 20px;
+}
