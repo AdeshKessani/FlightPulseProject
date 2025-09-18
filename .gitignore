@@ -59,3 +59,7 @@ coverage.xml
 
 # --- Binaries / OS artifacts that shouldn’t be versioned ---
 *.pid
+
+FlightAI/archive.zip
+
+FlightAI/archive.zip 
